@@ -1,5 +1,5 @@
 # mmdetection_ros
-A set of python scripts implementing MMDetection for object detection with depth camera.
+A set of python scripts implementing MMDetection for object detection with a depth camera.
 
 
 ![miniyellow](https://user-images.githubusercontent.com/55285546/137327224-e73b6477-19bd-483c-a2c5-71dba517235b.gif)
@@ -10,7 +10,7 @@ A set of python scripts implementing MMDetection for object detection with depth
 1. Clone this repo to your catkin workspace
 ```
 cd /catkin_ws/src
-git clone https://github.com/petpetpeter/Yolor-ROS.git
+git clone https://github.com/petpetpeter/mmdetection_ros.git
 ```
 2. Build your workspace
 ```
@@ -18,7 +18,7 @@ cd /catkin_ws/
 catkin build
 source ~/.bashrc
 ```
-3. Install Python Dependencies (Pytorch,MMDetection)
+3. Install Python Dependencies (Pytorch, MMDetection)
 > follow: https://mmdetection.readthedocs.io/en/latest/get_started.html#installation (recommend using conda)
 
 ez installation
