@@ -46,7 +46,7 @@ class MMD():
 
     def detect(self, img,conf = 0.8):
         visualize_img = img.copy()
-        self.resetDict(self.bboxDict)
+        #self.resetDict(self.bboxDict)
         # Prediction
         result = inference_detector(self.model, img)
         visualize_img = self.model.show_result(visualize_img, result, wait_time=0,score_thr=conf)
