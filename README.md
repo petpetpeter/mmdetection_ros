@@ -53,31 +53,10 @@ python rosimage_detector.py
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/55285546/137414960-87923703-37f9-4523-9f6d-6454ce6bbe73.gif)
 
 
-> TensorRT 8.0.3.4: Follow installation guide here https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html
-1. Convert pytorch weight file to onnx file
-```
-roscd yoloros/scripts/yolor
-python convert2Onnx.py --weight weights/yolor_p6.pt --out onnx/yolor_p6.onnx 
-```
-2. Convert onnx to tensorRT Engine
-```
-/usr/src/tensorrt/bin/trtexec --explicitBatch \
-                                --onnx=transformer_encoder.onnx \
-                                --saveEngine=transformer_encoder.trt \
-                                --minShapes=input:1x3x32x128 \
-                                --optShapes=input:32x3x32x512 \
-                                --maxShapes=input:32x3x32x768 \
-                                --verbose \
-                                --fp16
-```
-3. Launch ROS Yolor TensorRT example
-```
-roslaunch yoloros trt_camera.launch
 ```
 
 
 
 ## Acknowledgement
-- Yolor: https://github.com/WongKinYiu/yolor
-- Yolor-TensorRT: https://github.com/NNDam/yolor
+- MMDetection: https://github.com/open-mmlab/mmdetection
 
