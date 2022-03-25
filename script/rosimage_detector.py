@@ -30,6 +30,7 @@ from geometry_msgs.msg import Point,Pose,PoseStamped,PoseArray,PointStamped
 #MMD
 from mmdet.apis import init_detector, inference_detector, show_result_pyplot
 import mmcv
+from image_utils import showMmdResult
 
 class MMD():
     def __init__(self):
@@ -49,7 +50,7 @@ class MMD():
         #self.resetDict(self.bboxDict)
         # Prediction
         result = inference_detector(self.model, img)
-        visualize_img = self.model.show_result(visualize_img, result, wait_time=0,score_thr=conf)
+        visualize_img = showMmdResult.show_result(visualize_img, result,class_names=self.class_names, wait_time=0,score_thr=conf,show=False)
         for num_class in range(len(self.class_names)):
             if(self.result_type == "bbox"):  #only bounding box detection
                 bboxes_by_class = result[num_class] #[x1,y1,x2,y2,score]
