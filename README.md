@@ -2,7 +2,8 @@
 A set of python scripts implementing MMDetection for object detection with a depth camera.
 
 
-![miniyellow](https://user-images.githubusercontent.com/55285546/137327224-e73b6477-19bd-483c-a2c5-71dba517235b.gif)
+![miniyellow]https://user-images.githubusercontent.com/55285546/186028188-1be111ab-bdf4-4c66-bc4d-8996fd66bea1.gif)
+
 
 
 
